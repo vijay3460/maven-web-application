@@ -20,7 +20,7 @@ pipeline{
 /*
 	stage('archive artifacts'){
 	  steps{
-	    archiveArtifacts artifacts: '**/*.war'
+	    archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
 	  }
 	}
 	stage('sonarreport'){
