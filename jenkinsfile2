@@ -17,7 +17,7 @@ pipeline{
 	    sh "mvn clean package"
 	  }
 	}
-	/*
+/*
 	stage('archive artifacts'){
 	  steps{
 	    archiveArtifacts artifacts: '**/*.war'
@@ -33,7 +33,7 @@ pipeline{
 	    sh "mvn deploy"
 	  }
 	}
-	*/
+*/
 	stage('deploy to a container'){
 	  steps{
 	    deploy adapters: [tomcat9(credentialsId: 'a2cc5457-26b1-4830-9601-53723bd25dbc', path: '', url: 'http://65.1.95.220:8080/')], contextPath: '/opt/tomcat9/webapps/', war: '**/*.war'
