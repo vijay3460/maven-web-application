@@ -9,7 +9,7 @@ tools
 }
 
 triggers{
- pollSCM('* * * * *')
+ pollSCM('5/* * * * *')
 }
 
 options{
